@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import HeroSwiper from "./HeroSwiper";
+import { HiPlusSmall } from "react-icons/hi2";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="relative w-full h-full flex flex-col justify-center items-center lg:hidden">
@@ -13,6 +17,37 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         <HeroSwiper />
+        <div className="absolute top-1 w-full flex justify-center items-center text-white z-50 uppercase text-[9px]">{`Welcome to le palace`}</div>
+        <div
+          className={`absolute top-6 w-full flex justify-end items-center pr-4 z-50  text-black`}
+        >
+          <button
+            onClick={() => setOpen(!open)}
+            className={` rounded-full ${open ? "bg-transparent" : "bg-white"}`}
+          >
+            <HiPlusSmall size={28} />
+          </button>
+        </div>
+        {/* Popup */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.95 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="absolute top-6  bg-white text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
+            >
+              <p className="text-[13px] ">
+                {`At Le Palace, where everything from the French-inspired food (and the prices) are over the top, the opulent decor is matched only by the clientele.`}
+              </p>
+              <br />
+              <p className="text-[13px]">
+                {`The lighting throughout the space is rich and warm, and the owner, Nordine Fakir, credits it for much of the restaurant’s success. Most diners begin the evening sitting inside, but then make their way to the boudoir-esque basement, festooned in photos of Yves Saint Laurent, and where dancing on the furniture goes late into the night.`}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div className="relative w-full h-full lg:flex flex-col justify-center items-center hidden">
         <video className="object-cover h-full w-full" autoPlay loop muted>
