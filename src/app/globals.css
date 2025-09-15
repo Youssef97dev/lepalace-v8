@@ -23,7 +23,7 @@
   --primary: #6c0c0d;
   --background: #efedea;
   --secondary: #c9a95b;
-  --secondary-50: #c9aa5bbb;
+  --secondary-50: #3f3828bb;
 }
 
 html,
@@ -50,7 +50,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 /* Track */
@@ -60,8 +60,8 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 5px;
+  background: var(--secondary-50);
+  border-radius: 10px;
 }
 
 /* Handle on hover */

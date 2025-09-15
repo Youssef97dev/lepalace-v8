@@ -5,8 +5,9 @@ import { HiOutlinePlus } from "react-icons/hi2";
 import { motion, AnimatePresence } from "framer-motion";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import Booking from "./Booking";
 
-const Hero = ({ isOpen, setIsOpen }) => {
+const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -99,6 +100,8 @@ const Hero = ({ isOpen, setIsOpen }) => {
           )}
         </AnimatePresence>
       </div>
+
+      {/* Sidebar */}
       <Transition
         show={isOpen}
         enter="transition ease-out duration-700"
@@ -144,6 +147,21 @@ const Hero = ({ isOpen, setIsOpen }) => {
               <Link href="#">{"Whatsapp 00212 675-480101"}</Link>
             </li>
           </ul>
+        </div>
+      </Transition>
+
+      {/* Booking Form */}
+      <Transition
+        show={isOpenBook}
+        enter="transition ease-out duration-700"
+        enterFrom="transform translate-x-full opacity-0"
+        enterTo="transform translate-x-0 opacity-100"
+        leave="transition ease-in duration-500"
+        leaveFrom="transform translate-x-0 opacity-100"
+        leaveTo="transform translate-x-full opacity-0"
+      >
+        <div className="fixed  z-50 w-full lg:w-[25%] h-full bg-background flex justify-start">
+          <Booking />
         </div>
       </Transition>
     </>
