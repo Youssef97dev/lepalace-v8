@@ -1,11 +1,14 @@
-import Image from "next/image";
+"use client";
 import React from "react";
 import { RiMenuFold2Line } from "react-icons/ri";
 
-const Navbar = () => {
+const Navbar = ({ setIsOpen }) => {
   return (
-    <div className="w-full flex justify-between items-center border-b border-black py-[5px]">
-      <div className="text-[12px] text-[#000000] border-r border-black w-16 flex justify-center items-center py-[2px]">
+    <div className="w-full flex justify-between items-center border-b border-[#93918f] py-[5px] z-[60] bg-background">
+      <div
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="text-[12px] text-[#000000] border-r border-black w-16 flex justify-center items-center py-[2px]"
+      >
         <RiMenuFold2Line size={19} />
       </div>
       <div className="font-basker text-[18px]">{`LE PALACE`}</div>
