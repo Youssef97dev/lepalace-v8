@@ -43,7 +43,7 @@ const Hero = ({ isOpen, setIsOpen }) => {
               animate={{ scale: 1, opacity: 0.95 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute top-6  bg-white text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
+              className="absolute top-6  bg-background text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
             >
               <p className="text-[13px] ">
                 {`At Le Palace, where everything from the French-inspired food (and the prices) are over the top, the opulent decor is matched only by the clientele.`}
@@ -86,7 +86,7 @@ const Hero = ({ isOpen, setIsOpen }) => {
               animate={{ scale: 1, opacity: 0.95 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute top-6  bg-white text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
+              className="absolute top-6  bg-background text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
             >
               <p className="text-[13px] ">
                 {`At Le Palace, where everything from the French-inspired food (and the prices) are over the top, the opulent decor is matched only by the clientele.`}
