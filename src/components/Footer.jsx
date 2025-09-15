@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
       <div className="font-basker text-[18px]">{``}</div>
       <div className="text-[14px] text-[#000000] border-l border-black px-3 py-[2px]">
-        {"SHOP"}
+        {"MENU"}
       </div>
     </div>
   );
