@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import HeroSwiper from "./HeroSwiper";
-import { HiPlusSmall } from "react-icons/hi2";
+import { HiOutlinePlus } from "react-icons/hi2";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
@@ -23,9 +23,11 @@ const Hero = () => {
         >
           <button
             onClick={() => setOpen(!open)}
-            className={` rounded-full ${open ? "bg-transparent" : "bg-white"}`}
+            className={` rounded-full p-2 ${
+              open ? "bg-transparent" : "bg-white"
+            }`}
           >
-            <HiPlusSmall size={28} />
+            <HiOutlinePlus size={20} />
           </button>
           {!open && (
             <span className="uppercase text-white text-[12px] text-center">{`About`}</span>
