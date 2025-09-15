@@ -19,7 +19,7 @@ const Hero = () => {
         <HeroSwiper />
         <div className="absolute top-1 w-full flex justify-center items-center text-white z-50 uppercase text-[9px]">{`Welcome to le palace`}</div>
         <div
-          className={`absolute top-6 w-full flex justify-end items-center pr-4 z-50  text-black`}
+          className={`absolute top-6 w-full flex flex-col justify-center items-end pr-4 z-50 gap-2  text-black`}
         >
           <button
             onClick={() => setOpen(!open)}
@@ -27,6 +27,9 @@ const Hero = () => {
           >
             <HiPlusSmall size={28} />
           </button>
+          {!open && (
+            <span className="uppercase text-white text-[12px] text-center">{`About`}</span>
+          )}
         </div>
         {/* Popup */}
         <AnimatePresence>
