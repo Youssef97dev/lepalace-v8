@@ -2,6 +2,7 @@
 import { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { usePalace } from "@/context/PalaceContext";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,13 +14,23 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Link from "next/link";
 
 const palaceText = [
-  { text: "Menu", link: "#", linkText: "Discover" },
-  { text: "Reservation", link: "#", linkText: "Book" },
-  { text: "Gallery", link: "#", linkText: "Discover" },
+  { text: "Menu", link: "/menu", linkText: "Discover" },
+  { text: "Contact", link: "/contact-us", linkText: "Contact" },
+  { text: "Gallery", link: "/gallery", linkText: "Discover" },
 ];
 
 const HeroSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const {
+    openAbout,
+    toggleAbout,
+    openSideBar,
+    toggleSideBar,
+    openBook,
+    toggleBook,
+    openContact,
+    toggleContact,
+  } = usePalace();
   return (
     <div className="absolute w-full h-full  flex flex-col justify-center items-center py-20  z-50">
       <div className="w-full h-full  flex justify-center items-center">
@@ -53,7 +64,7 @@ const HeroSwiper = () => {
         </Swiper>
       </div>
       <Link
-        href={"#"}
+        href={palaceText[activeIndex].link}
         className="text-[13px] bg-white text-black px-12 py-[6px] tracking-widest uppercase"
       >
         {palaceText[activeIndex].linkText}
