@@ -16,16 +16,16 @@ const Contact = () => {
           <p className="text-[15px]">{`Av. Echouhada Rue Ahmed Chawqui Hivernage1`}</p>
         </div>
         <div className="w-full flex flex-col justify-start items-start">
-          <span className="mb-3 font-semibold tracking-widest text-[16px]">{`Contact us`}</span>
-          <p className="text-[15px]">{`PHONE : +212 6 75 48 00 18`}</p>
-          <p className="text-[15px]">{`reservation@le-palacemarrakech.com`}</p>
+          <span className="mb-3 font-semibold tracking-widest text-[16px]">{`Opening hours`}</span>
+          <p className="text-[15px]">{`Every Day: 07:00PM - 02:00AM`}</p>
         </div>
       </div>
 
       <div className="w-full flex lg:flex-row flex-col justify-start items-start gap-5">
         <div className="w-full flex flex-col justify-start items-start">
-          <span className="mb-3 font-semibold tracking-widest text-[16px]">{`Opening hours`}</span>
-          <p className="text-[15px]">{`Every Day: 07:00PM - 02:00AM`}</p>
+          <span className="mb-3 font-semibold tracking-widest text-[16px]">{`Contact us`}</span>
+          <p className="text-[15px]">{`PHONE : +212 6 75 48 00 18`}</p>
+          <p className="text-[15px]">{`reservation@le-palacemarrakech.com`}</p>
         </div>
         <div className="w-full flex flex-col justify-start items-start">
           <span className=" font-semibold tracking-widest text-[16px]">{`Social`}</span>

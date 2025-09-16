@@ -8,9 +8,6 @@ const Container = () => {
       <div className="w-full h-full">
         <Contact />
       </div>
-      <div className="w-full h-full">
-        <ContactForm />
-      </div>
     </div>
   );
 };
