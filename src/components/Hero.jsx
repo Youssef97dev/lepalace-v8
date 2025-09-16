@@ -8,6 +8,11 @@ import Link from "next/link";
 import Booking from "./Booking";
 import { usePalace } from "@/context/PalaceContext";
 import Contact from "./Contact";
+import {
+  FaWhatsappSquare,
+  FaInstagramSquare,
+  FaMailBulk,
+} from "react-icons/fa";
 
 const Hero = () => {
   const {
@@ -151,7 +156,7 @@ const Hero = () => {
               <span>{"/"}</span>
               <Link href="/contact-us">{"FR"}</Link>
             </li>
-            <li className="w-full flex flex-col justify-center items-center gap-2 pb-3 capitalize">
+            <li className="w-full flex flex-col justify-center items-center gap-2 capitalize">
               <span>{"Le Palace Marrakech Restaurant & Fine dining."}</span>
               <span>{"Av. Echouhada Rue Ahmed Chawqui Hivernage1"}</span>
               <span>{"Opening hours: 07.00 PM – 02.00 AM"}</span>
@@ -159,6 +164,23 @@ const Hero = () => {
                 {"reservation@le-palacemarrakech.com"}
               </Link>
               <Link href="#">{"Whatsapp 00212 675-480101"}</Link>
+            </li>
+            <li className="w-full  flex justify-center items-center gap-3">
+              <Link href="http://wa.me/212675480101" target="_blank">
+                <FaWhatsappSquare size={25} />
+              </Link>
+              <Link
+                href="https://www.instagram.com/lepalacemarrakech"
+                target="_blank"
+              >
+                <FaInstagramSquare size={25} />
+              </Link>
+              <Link
+                href="mailto:reservation@le-palacemarrakech.com"
+                target="_blank"
+              >
+                <FaMailBulk size={25} />
+              </Link>
             </li>
           </ul>
         </div>
