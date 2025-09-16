@@ -7,6 +7,9 @@ import Image from "next/image";
 
 const galleryItems = [
   {
+    src: "/images/palace-20.jpg",
+  },
+  {
     src: "/images/palace-3.jpg",
   },
   {
@@ -27,7 +30,9 @@ const galleryItems = [
   {
     src: "/images/palace-10.jpg",
   },
-
+  {
+    src: "/images/palace-19.jpg",
+  },
   {
     src: "/images/palace-9.jpg",
   },
@@ -60,6 +65,9 @@ const galleryItems = [
   },
   {
     src: "/images/palace-18.jpg",
+  },
+  {
+    src: "/images/palace-21.jpg",
   },
 ];
 
