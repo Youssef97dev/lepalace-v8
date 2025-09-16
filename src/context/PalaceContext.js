@@ -7,6 +7,7 @@ export const PalaceProvider = ({ children }) => {
   const [openAbout, setOpenAbout] = useState(false);
   const [openSideBar, setOpenSideBar] = useState(false);
   const [openBook, setOpenBook] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const toggleAbout = () => {
@@ -19,6 +20,10 @@ export const PalaceProvider = ({ children }) => {
 
   const toggleSideBar = () => {
     setOpenSideBar((prev) => !prev);
+  };
+
+  const toggleContact = () => {
+    setOpenContact((prev) => !prev);
   };
 
   const changeMobile = (type) => {
@@ -34,6 +39,8 @@ export const PalaceProvider = ({ children }) => {
         toggleBook,
         openSideBar,
         toggleSideBar,
+        openContact,
+        toggleContact,
         changeMobile,
         isMobile,
       }}

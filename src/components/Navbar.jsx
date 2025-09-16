@@ -2,6 +2,7 @@
 import React from "react";
 import { RiMenuFold2Line } from "react-icons/ri";
 import { usePalace } from "@/context/PalaceContext";
+import Link from "next/link";
 
 const Navbar = () => {
   const { toggleSideBar, toggleBook } = usePalace();
@@ -13,7 +14,9 @@ const Navbar = () => {
       >
         <RiMenuFold2Line size={19} />
       </div>
-      <div className="font-basker text-[18px]">{`LE PALACE`}</div>
+      <div className="font-basker text-[18px]">
+        <Link href="/">{`LE PALACE`}</Link>
+      </div>
       <div
         onClick={() => toggleBook()}
         className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px]"
