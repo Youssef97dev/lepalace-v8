@@ -5,10 +5,7 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import Link from "next/link";
 import Image from "next/image";
 
-const galleryItems = [
-  {
-    src: "/images/palace-20.jpg",
-  },
+const galleryItems_1 = [
   {
     src: "/images/palace-3.jpg",
   },
@@ -27,11 +24,14 @@ const galleryItems = [
   {
     src: "/images/palace-8.jpg",
   },
+];
+
+const galleryItems_2 = [
   {
     src: "/images/palace-10.jpg",
   },
   {
-    src: "/images/palace-19.jpg",
+    src: "/images/palace-20.jpg",
   },
   {
     src: "/images/palace-9.jpg",
@@ -66,9 +66,6 @@ const galleryItems = [
   {
     src: "/images/palace-18.jpg",
   },
-  {
-    src: "/images/palace-21.jpg",
-  },
 ];
 
 const MemoizedImage = React.memo(({ src, alt }) => (
@@ -88,13 +85,16 @@ MemoizedImage.displayName = "MemoizedImage";
 
 const Gallery = () => {
   return (
-    <div id="gallery" className="mx-auto pb-5 pt-5 lg:pt-40 px-0 lg:px-4">
+    <div
+      id="gallery"
+      className="mx-auto pb-5 pt-5 lg:pt-40 px-0 lg:px-4 flex flex-col justify-center items-center"
+    >
       <LightGallery
         speed={500}
         plugins={[lgThumbnail]}
         elementClassNames="masonry"
       >
-        {galleryItems?.map((image, index) => (
+        {galleryItems_1?.map((image, index) => (
           <Link href={image.src} key={index}>
             <div className="masonry-item relative shadow-lg hover:scale-105 transition-all ease-linear overflow-hidden">
               <MemoizedImage
@@ -105,6 +105,34 @@ const Gallery = () => {
           </Link>
         ))}
       </LightGallery>
+      <div className="shadow-lg overflow-hidden pb-2">
+        <MemoizedImage
+          src="/images/palace-19.jpg"
+          alt={`Le Palace Marrakech`}
+        />
+      </div>
+      <LightGallery
+        speed={500}
+        plugins={[lgThumbnail]}
+        elementClassNames="masonry"
+      >
+        {galleryItems_2?.map((image, index) => (
+          <Link href={image.src} key={index}>
+            <div className="masonry-item relative shadow-lg hover:scale-105 transition-all ease-linear overflow-hidden">
+              <MemoizedImage
+                src={image.src}
+                alt={`Le Palace Marrakech ${index}`}
+              />
+            </div>
+          </Link>
+        ))}
+      </LightGallery>
+      <div className="shadow-lg overflow-hidden pt-2">
+        <MemoizedImage
+          src="/images/palace-21.jpg"
+          alt={`Le Palace Marrakech`}
+        />
+      </div>
     </div>
   );
 };
