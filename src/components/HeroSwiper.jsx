@@ -58,7 +58,7 @@ const HeroSwiper = () => {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 5000,
+            delay: 6500,
             disableOnInteraction: false,
           }}
           loop={true}
