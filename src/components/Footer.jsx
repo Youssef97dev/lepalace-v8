@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,9 +9,12 @@ const Footer = () => {
         {">"}
       </div>
       <div className="font-basker text-[18px]">{``}</div>
-      <div className="text-[14px] text-[#000000] border-l border-black px-3 py-[2px]">
+      <Link
+        href="/menu"
+        className="text-[14px] text-[#000000] border-l border-black px-3 py-[2px]"
+      >
         {"MENU"}
-      </div>
+      </Link>
     </div>
   );
 };

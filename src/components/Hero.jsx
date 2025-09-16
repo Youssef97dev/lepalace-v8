@@ -16,6 +16,7 @@ const Hero = () => {
     openSideBar,
     toggleSideBar,
     openBook,
+    toggleBook,
     openContact,
     toggleContact,
   } = usePalace();
@@ -133,8 +134,11 @@ const Hero = () => {
               <Link href="/menu">{"Menu"}</Link>
             </li>
 
-            <li className="pb-3 border-b border-[#93918f]">
-              <Link href="/reservation">{"Reservation"}</Link>
+            <li
+              onClick={() => toggleBook()}
+              className="pb-3 border-b border-[#93918f] cursor-pointer"
+            >
+              <span>{"Reservation"}</span>
             </li>
             <li className="pb-3 border-b border-[#93918f]">
               <Link href="/gallery">{"Gallery"}</Link>

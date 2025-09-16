@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       <div
         onClick={() => toggleBook()}
-        className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px]"
+        className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px] cursor-pointer"
       >
         {"BOOK"}
       </div>
