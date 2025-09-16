@@ -24,17 +24,28 @@ const Hero = () => {
     toggleBook,
     openContact,
     toggleContact,
+    video,
   } = usePalace();
   return (
     <>
-      <div className="relative w-full h-full flex flex-col justify-center items-center lg:hidden">
-        <video className="object-cover h-full w-full" autoPlay loop muted>
-          <source
-            src="https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+      <div className="relative w-full h-full flex-1 flex flex-col justify-center items-center lg:hidden">
+        <AnimatePresence mode="popLayout">
+          <motion.video
+            key={video} // important for triggering fade on change
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </motion.video>
+        </AnimatePresence>
         <HeroSwiper />
         <div className="absolute top-1 w-full flex justify-center items-center text-white  uppercase text-[9px]">{`Welcome to le palace`}</div>
         <div

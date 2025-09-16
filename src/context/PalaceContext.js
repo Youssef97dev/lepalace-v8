@@ -8,6 +8,9 @@ export const PalaceProvider = ({ children }) => {
   const [openSideBar, setOpenSideBar] = useState(false);
   const [openBook, setOpenBook] = useState(false);
   const [openContact, setOpenContact] = useState(false);
+  const [video, setVideo] = useState(
+    "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4"
+  );
   const [isMobile, setIsMobile] = useState(false);
 
   const toggleAbout = () => {
@@ -26,6 +29,10 @@ export const PalaceProvider = ({ children }) => {
     setOpenContact((prev) => !prev);
   };
 
+  const changeVideo = (link) => {
+    setVideo(link);
+  };
+
   const changeMobile = (type) => {
     setIsMobile(type);
   };
@@ -42,6 +49,8 @@ export const PalaceProvider = ({ children }) => {
         openContact,
         toggleContact,
         changeMobile,
+        video,
+        changeVideo,
         isMobile,
       }}
     >

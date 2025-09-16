@@ -14,23 +14,43 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Link from "next/link";
 
 const palaceText = [
-  { text: "Menu", link: "/menu", linkText: "Discover" },
-  { text: "Contact", link: "/contact-us", linkText: "Contact" },
-  { text: "Gallery", link: "/gallery", linkText: "Discover" },
+  {
+    text: "Menu",
+    link: "/menu",
+    linkText: "Discover",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
+  },
+  {
+    text: "Contact",
+    link: "/contact-us",
+    linkText: "Contact",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
+  },
+  {
+    text: "Gallery",
+    link: "/gallery",
+    linkText: "Discover",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
+  },
+  {
+    text: "Music & Dance",
+    link: "#",
+    linkText: "Discover",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1758025269/palace/palace-music_a4s2ar.mp4",
+  },
 ];
 
 const HeroSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const {
-    openAbout,
-    toggleAbout,
-    openSideBar,
-    toggleSideBar,
-    openBook,
-    toggleBook,
-    openContact,
-    toggleContact,
-  } = usePalace();
+  const { video, changeVideo } = usePalace();
+  const changeIndex = (index) => {
+    setActiveIndex(index);
+    changeVideo(palaceText[index].video);
+  };
   return (
     <div className="absolute w-full h-full  flex flex-col justify-center items-center py-20  z-50">
       <div className="w-full h-full  flex justify-center items-center">
@@ -45,7 +65,7 @@ const HeroSwiper = () => {
           speed={2000}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper1"
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          onSlideChange={(swiper) => changeIndex(swiper.realIndex)}
         >
           {palaceText.map((palace, i) => (
             <SwiperSlide key={i} className="">
