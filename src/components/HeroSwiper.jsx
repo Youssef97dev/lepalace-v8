@@ -27,10 +27,11 @@ const HeroSwiper = () => {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 6000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           loop={true}
+          speed={2000}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper1"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
