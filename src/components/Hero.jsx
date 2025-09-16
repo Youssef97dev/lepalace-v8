@@ -1,14 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import HeroSwiper from "./HeroSwiper";
 import { HiOutlinePlus } from "react-icons/hi2";
 import { motion, AnimatePresence } from "framer-motion";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import Booking from "./Booking";
+import { usePalace } from "@/context/PalaceContext";
 
-const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
-  const [open, setOpen] = useState(false);
+const Hero = () => {
+  const { openAbout, toggleAbout, openSideBar, toggleSideBar, openBook } =
+    usePalace();
   return (
     <>
       <div className="relative w-full h-full flex flex-col justify-center items-center lg:hidden">
@@ -25,20 +27,20 @@ const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
           className={`absolute top-6 w-full flex flex-col justify-center items-end pr-4 z-50  gap-2  text-black`}
         >
           <button
-            onClick={() => setOpen(!open)}
+            onClick={() => toggleAbout()}
             className={` rounded-full p-2 ${
-              open ? "bg-transparent" : "bg-background"
+              openAbout ? "bg-transparent" : "bg-background"
             }`}
           >
             <HiOutlinePlus size={20} />
           </button>
-          {!open && (
+          {!openAbout && (
             <span className="uppercase text-white text-[12px] text-center">{`About`}</span>
           )}
         </div>
         {/* Popup */}
         <AnimatePresence>
-          {open && (
+          {openAbout && (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.95 }}
@@ -68,20 +70,20 @@ const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
           className={`absolute top-6 w-full flex flex-col justify-center items-end pr-4 z-50  gap-2  text-black`}
         >
           <button
-            onClick={() => setOpen(!open)}
+            onClick={() => toggleAbout()}
             className={` rounded-full p-2 ${
-              open ? "bg-transparent" : "bg-background"
+              openAbout ? "bg-transparent" : "bg-background"
             }`}
           >
             <HiOutlinePlus size={20} />
           </button>
-          {!open && (
+          {!openAbout && (
             <span className="uppercase text-white text-[12px] text-center">{`About`}</span>
           )}
         </div>
         {/* Popup */}
         <AnimatePresence>
-          {open && (
+          {openAbout && (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.95 }}
@@ -103,7 +105,7 @@ const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
 
       {/* Sidebar */}
       <Transition
-        show={isOpen}
+        show={openSideBar}
         enter="transition ease-out duration-700"
         enterFrom="transform -translate-x-full opacity-0"
         enterTo="transform -translate-x-0 opacity-100"
@@ -113,7 +115,7 @@ const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
       >
         <div className="fixed top-0 left-0 z-50 w-full lg:w-[25%] h-full bg-background flex flex-col justify-start gap-16  py-16 uppercase text-center">
           <ul
-            onClick={() => setIsOpen(false)}
+            onClick={() => toggleSideBar()}
             className="space-y-8 text-black leading-[25px] text-[12px]"
           >
             <li className="pb-3 border-b border-[#93918f]">
@@ -152,7 +154,7 @@ const Hero = ({ isOpen, setIsOpen, isOpenBook, setIsOpenBook }) => {
 
       {/* Booking Form */}
       <Transition
-        show={isOpenBook}
+        show={openBook}
         enter="transition ease-out duration-700"
         enterFrom="transform translate-x-full opacity-0"
         enterTo="transform translate-x-0 opacity-100"

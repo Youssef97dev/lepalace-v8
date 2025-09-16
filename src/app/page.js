@@ -1,6 +1,10 @@
 import Loader from "@/components/Loader";
-import Image from "next/image";
+import { PalaceProvider } from "@/context/PalaceContext";
 
 export default function Home() {
-  return <Loader />;
+  return (
+    <PalaceProvider>
+      <Loader />
+    </PalaceProvider>
+  );
 }
