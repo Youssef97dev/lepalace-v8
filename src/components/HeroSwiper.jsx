@@ -23,15 +23,6 @@ const HeroSwiper = () => {
 
   const palaceText = [
     {
-      text: "Menu",
-      link: "/menu",
-      link_span: "#",
-      linkText: t("hero.discover"),
-      logo: "",
-      video:
-        "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
-    },
-    {
       text: "Contact",
       link: "/contact-us",
       link_span: "#",
