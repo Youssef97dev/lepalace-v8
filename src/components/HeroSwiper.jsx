@@ -44,8 +44,8 @@ const palaceText = [
   },
   {
     text: "Music & Dance",
-    link: "#",
-    link_span: "#",
+    link: "/music",
+    link_span: "/music",
     linkText: "Discover",
     logo: "",
     video:

@@ -5,6 +5,7 @@ const PalaceContext = createContext();
 
 export const PalaceProvider = ({ children }) => {
   const [openAbout, setOpenAbout] = useState(false);
+  const [openDance, setOpenDance] = useState(false);
   const [openSideBar, setOpenSideBar] = useState(false);
   const [openBook, setOpenBook] = useState(false);
   const [openContact, setOpenContact] = useState(false);
@@ -29,6 +30,10 @@ export const PalaceProvider = ({ children }) => {
     setOpenContact((prev) => !prev);
   };
 
+  const toggleDance = () => {
+    setOpenDance((prev) => !prev);
+  };
+
   const changeVideo = (link) => {
     setVideo(link);
   };
@@ -42,6 +47,8 @@ export const PalaceProvider = ({ children }) => {
       value={{
         openAbout,
         toggleAbout,
+        openDance,
+        toggleDance,
         openBook,
         toggleBook,
         openSideBar,

@@ -11,7 +11,7 @@ const Restaurant = () => {
   ];
 
   return (
-    <div className="h-full w-full flex flex-col overflow-hidden">
+    <div className="h-full w-full flex flex-col overflow-hidden gap-[1px]">
       {images.map((img, i) => (
         <div
           key={i}

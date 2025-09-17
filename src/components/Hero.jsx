@@ -8,11 +8,6 @@ import Link from "next/link";
 import Booking from "./Booking";
 import { usePalace } from "@/context/PalaceContext";
 import Contact from "./Contact";
-import {
-  FaWhatsappSquare,
-  FaInstagramSquare,
-  FaMailBulk,
-} from "react-icons/fa";
 
 const Hero = () => {
   const {
