@@ -151,14 +151,25 @@ const Gallery = () => {
               <span>{"/"}</span>
               <Link href="/contact-us">{"FR"}</Link>
             </li>
-            <li className="w-full flex flex-col justify-center items-center gap-2 pb-3 capitalize">
+            <li className="w-full flex flex-col justify-center items-center gap-1 capitalize">
               <span>{"Le Palace Marrakech Restaurant & Fine dining."}</span>
               <span>{"Av. Echouhada Rue Ahmed Chawqui Hivernage1"}</span>
               <span>{"Opening hours: 07.00 PM – 02.00 AM"}</span>
               <Link href="#" className="lowercase">
                 {"reservation@le-palacemarrakech.com"}
               </Link>
-              <Link href="#">{"Whatsapp 00212 675-480101"}</Link>
+              <Link
+                href="https://www.instagram.com/lepalacemarrakech/"
+                className="tracking-widest"
+              >
+                {"INSTAGRAM ￫"}
+              </Link>
+              <Link
+                href="http://wa.me/212675480101"
+                className="tracking-widest"
+              >
+                {"WHATSAPP ￫"}
+              </Link>
             </li>
           </ul>
         </div>
