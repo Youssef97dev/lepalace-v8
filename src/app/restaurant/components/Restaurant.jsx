@@ -6,7 +6,7 @@ const Restaurant = () => {
 
   const images = [
     { src: "/images/palace-1.jpg", text: "Terrace" },
-    { src: "/images/palace-11.jpg", text: "Restaurant" },
+    { src: "/images/palace-11.jpg", text: "Interior" },
     { src: "/images/palace-8.jpg", text: "Basement" },
   ];
 

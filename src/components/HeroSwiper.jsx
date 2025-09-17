@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Link from "next/link";
+import Image from "next/image";
 
 const palaceText = [
   {
@@ -56,8 +57,7 @@ const palaceText = [
     link_span: "/restaurant",
     linkText: "Discover",
     logo: "",
-    video:
-      "https://res.cloudinary.com/dz7wroord/video/upload/v1758025269/palace/palace-music_a4s2ar.mp4",
+    video: "/videos/slides.mp4",
   },
 ];
 
@@ -86,7 +86,15 @@ const HeroSwiper = () => {
           {palaceText.map((palace, i) => (
             <SwiperSlide key={i} className="">
               <div className="text-white h-full text-[18.5px] tracking-widest uppercase w-full flex flex-col justify-between items-center">
-                <span>{""}</span>
+                {palace.text === "Restaurant" && (
+                  <Image
+                    src="/logo/horse.png"
+                    alt="logo"
+                    width={500}
+                    height={500}
+                    className="object-cover w-10"
+                  />
+                )}
                 <Link href={palace.link_span}>{palace.text}</Link>
                 {/*<Link
                 href={palace.link}

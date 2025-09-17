@@ -167,30 +167,24 @@ const Hero = () => {
               <span>{"/"}</span>
               <Link href="/contact-us">{"FR"}</Link>
             </li>
-            <li className="w-full flex flex-col justify-center items-center gap-2 capitalize">
+            <li className="w-full flex flex-col justify-center items-center gap-1 capitalize">
               <span>{"Le Palace Marrakech Restaurant & Fine dining."}</span>
               <span>{"Av. Echouhada Rue Ahmed Chawqui Hivernage1"}</span>
               <span>{"Opening hours: 07.00 PM – 02.00 AM"}</span>
               <Link href="#" className="lowercase">
                 {"reservation@le-palacemarrakech.com"}
               </Link>
-              <Link href="#">{"Whatsapp 00212 675-480101"}</Link>
-            </li>
-            <li className="w-full  flex justify-center items-center gap-3">
-              <Link href="http://wa.me/212675480101" target="_blank">
-                <FaWhatsappSquare size={25} />
+              <Link
+                href="https://www.instagram.com/lepalacemarrakech/"
+                className="tracking-widest"
+              >
+                {"INSTAGRAM ￫"}
               </Link>
               <Link
-                href="https://www.instagram.com/lepalacemarrakech"
-                target="_blank"
+                href="http://wa.me/212675480101"
+                className="tracking-widest"
               >
-                <FaInstagramSquare size={25} />
-              </Link>
-              <Link
-                href="mailto:reservation@le-palacemarrakech.com"
-                target="_blank"
-              >
-                <FaMailBulk size={25} />
+                {"WHATSAPP ￫"}
               </Link>
             </li>
           </ul>
