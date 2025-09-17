@@ -57,7 +57,8 @@ const palaceText = [
     link_span: "/restaurant",
     linkText: "Discover",
     logo: "",
-    video: "/videos/slides.mp4",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1758119001/palace/slides_c8p9qq.mp4",
   },
 ];
 
