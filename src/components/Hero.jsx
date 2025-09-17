@@ -74,11 +74,11 @@ const Hero = () => {
               className="absolute top-6  bg-background text-black mx-4 px-6 pt-5 pb-16 shadow-lg z-40 "
             >
               <p className="text-[13px] ">
-                {`At Le Palace, where everything from the French-inspired food (and the prices) are over the top, the opulent decor is matched only by the clientele.`}
+                {`Situated in the heart of the exclusive ‘Hivernage’ district of Marrakech, Le Palace is a chic destination restaurant and bar, where 1920s Art Deco design style and subtle Colonial touches combine to create a sophisticated experience that attracts a like minded following. Charming service and an outstanding menu complement the ‘sense of place’ and effortless elegance achieved by restaurant impresario Nouradine Fakir.`}
               </p>
               <br />
               <p className="text-[13px]">
-                {`The lighting throughout the space is rich and warm, and the owner, Nordine Fakir, credits it for much of the restaurant’s success. Most diners begin the evening sitting inside, but then make their way to the boudoir-esque basement, festooned in photos of Yves Saint Laurent, and where dancing on the furniture goes late into the night.`}
+                {`Cafe society cool upstairs and decadent dining below with velvet chairs and dimmed lighting that evoke the idea of a ‘boudoir speakeasy’. A night at Le Palace is an essential evening activity during a visit to Marrakech.`}
               </p>
             </motion.div>
           )}
