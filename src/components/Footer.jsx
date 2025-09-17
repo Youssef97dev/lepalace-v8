@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import { MdPause, MdPlayArrow } from "react-icons/md";
 
 const Footer = () => {
   const audioRef = useRef(null);
@@ -27,7 +28,11 @@ const Footer = () => {
         onClick={togglePlay}
         className="text-[14px] text-[#000000] border-r border-black px-3 py-[2px]"
       >
-        {isPlaying ? "⏸" : "▶"}
+        {isPlaying ? (
+          <MdPause size={16} color="#000000" />
+        ) : (
+          <MdPlayArrow size={16} color="#000000" />
+        )}
       </div>
       <div className="font-basker text-[18px]">{``}</div>
       <Link
