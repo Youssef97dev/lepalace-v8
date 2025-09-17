@@ -8,7 +8,7 @@ import { Transition } from "@headlessui/react";
 import { usePalace } from "@/context/PalaceContext";
 import Booking from "@/components/Booking";
 
-const galleryItems_1 = [
+const galleryItems = [
   {
     src: "/images/palace-3.jpg",
   },
@@ -27,14 +27,14 @@ const galleryItems_1 = [
   {
     src: "/images/palace-8.jpg",
   },
-];
-
-const galleryItems_2 = [
   {
     src: "/images/palace-10.jpg",
   },
   {
     src: "/images/palace-20.jpg",
+  },
+  {
+    src: "/images/palace-19.jpg",
   },
   {
     src: "/images/palace-9.jpg",
@@ -47,6 +47,9 @@ const galleryItems_2 = [
   },
   {
     src: "/images/palace-13.jpg",
+  },
+  {
+    src: "/images/palace-21.jpg",
   },
   {
     src: "/images/palace-14.jpg",
@@ -98,7 +101,7 @@ const Gallery = () => {
         plugins={[lgThumbnail]}
         elementClassNames="masonry"
       >
-        {galleryItems_1?.map((image, index) => (
+        {galleryItems?.map((image, index) => (
           <Link href={image.src} key={index}>
             <div className="masonry-item relative shadow-lg hover:scale-105 transition-all ease-linear overflow-hidden">
               <MemoizedImage
@@ -109,34 +112,6 @@ const Gallery = () => {
           </Link>
         ))}
       </LightGallery>
-      <div className="shadow-lg overflow-hidden pb-2">
-        <MemoizedImage
-          src="/images/palace-19.jpg"
-          alt={`Le Palace Marrakech`}
-        />
-      </div>
-      <LightGallery
-        speed={500}
-        plugins={[lgThumbnail]}
-        elementClassNames="masonry"
-      >
-        {galleryItems_2?.map((image, index) => (
-          <Link href={image.src} key={index}>
-            <div className="masonry-item relative shadow-lg hover:scale-105 transition-all ease-linear overflow-hidden">
-              <MemoizedImage
-                src={image.src}
-                alt={`Le Palace Marrakech ${index}`}
-              />
-            </div>
-          </Link>
-        ))}
-      </LightGallery>
-      <div className="shadow-lg overflow-hidden pt-2">
-        <MemoizedImage
-          src="/images/palace-21.jpg"
-          alt={`Le Palace Marrakech`}
-        />
-      </div>
       {/* Sidebar */}
       <Transition
         show={openSideBar}
