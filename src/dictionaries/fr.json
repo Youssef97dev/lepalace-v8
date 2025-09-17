@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "book": "Réserver",
+    "home": "Accueil",
+    "reservation": "Réservation",
+    "gallery": "Galerie"
+  },
+  "hero": {
+    "text_top": "Bienvenue au Palace",
+    "about": "À propos",
+    "discover": "Découvrir",
+    "music": "Musique & Danse",
+    "text_1": "Situé au cœur du prestigieux quartier de l’Hivernage à Marrakech, Le Palace est un restaurant et bar chic où le style Art Déco des années 1920 et les touches coloniales subtiles s’allient pour créer une expérience raffinée qui attire une clientèle exigeante. Un service charmant et un menu exceptionnel viennent compléter ce « sens du lieu » et cette élégance naturelle réalisée par l’impresario de la restauration Nouradine Fakir.",
+    "text_2": "Une ambiance café-society élégante à l’étage et une atmosphère de dîner décadent au sous-sol, avec des fauteuils en velours et des lumières tamisées évoquant l’idée d’un « boudoir speakeasy ». Une soirée au Palace est une activité incontournable lors d’une visite à Marrakech."
+  },
+  "contact": {
+    "loaction": "Localisation",
+    "open": "Horaires d’ouverture",
+    "contactus": "Contactez-nous",
+    "social": "Réseaux sociaux"
+  },
+  "booking": {
+    "title": "Demande de réservation",
+    "firstname": "Prénom",
+    "lastname": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "guests": "Invités",
+    "reservationdate": "Date de réservation",
+    "time": "Heure",
+    "request": "Demande",
+    "message": "Merci pour votre demande, nous vous répondrons dans les plus brefs délais"
+  },
+  "music": {
+    "text_1": "Au Palace Marrakech, la nuit s’anime avec l’énergie intemporelle des années 80 et 90. Nos DJs résidents créent une bande-son inoubliable qui mélange les classiques dorés avec des rythmes dansants irrésistibles, vous transportant dans l’univers vibrant des nuits rétro. Fauteuils en velours, éclairages tamisés et décor Art Déco chic offrent la scène idéale pour des soirées pleines de rythme, d’élégance et de célébration.",
+    "text_2": "Que vous savouriez un dîner raffiné ou que vous rejoigniez la foule sur la piste de danse, la musique du Palace n’est pas seulement un divertissement : c’est le battement de cœur de la soirée, donnant le ton à des souvenirs qui durent bien au-delà de la nuit."
+  },
+  "restau": {
+    "terrace": "Terrasse",
+    "inter": "Intérieur",
+    "basement": "Sous-sol"
+  }
+}

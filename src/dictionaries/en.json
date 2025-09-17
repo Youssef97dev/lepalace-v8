@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "book": "Book",
+    "home": "Home",
+    "reservation": "Reservation",
+    "gallery": "Gallery"
+  },
+  "hero": {
+    "text_top": "Welcome to le palace",
+    "about": "About",
+    "discover": "Discover",
+    "music": "Music & Dance",
+    "text_1": "Situated in the heart of the exclusive ‘Hivernage’ district of Marrakech, Le Palace is a chic destination restaurant and bar, where 1920s Art Deco design style and subtle Colonial touches combine to create a sophisticated experience that attracts a like minded following. Charming service and an outstanding menu complement the ‘sense of place’ and effortless elegance achieved by restaurant impresario Nouradine Fakir.",
+    "text_2": "Cafe society cool upstairs and decadent dining below with velvet chairs and dimmed lighting that evoke the idea of a ‘boudoir speakeasy’. A night at Le Palace is an essential evening activity during a visit to Marrakech."
+  },
+  "contact": {
+    "loaction": "Location",
+    "open": "Opening hours",
+    "contactus": "Contact us",
+    "social": "Social"
+  },
+  "booking": {
+    "title": "Booking Request",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "guests": "Guests",
+    "reservationdate": "Reservation Date",
+    "time": "Time",
+    "request": "Request",
+    "message": "Thank you for your request, we will get back to you as soon as possible"
+  },
+  "music": {
+    "text_1": "At Le Palace Marrakech, the night comes alive with the timeless energy of the ’80s and ’90s disco era. Our resident DJs craft an unforgettable soundtrack that blends golden oldies with irresistible dance beats, transporting you to the vibrant world of retro nightlife. Velvet chairs, warm lighting, and a chic Art Deco setting provide the perfect stage for nights filled with rhythm, elegance, and celebration.",
+    "text_2": "Whether you’re savoring a fine dinner or joining the crowd on the dance floor, the music at Le Palace isn’t just entertainment it’s the heartbeat of the evening, setting the tone for memories that last long after the night ends."
+  },
+  "restau": {
+    "terrace": "Terrace",
+    "inter": "Interior",
+    "basement": "Basement"
+  }
+}

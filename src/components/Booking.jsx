@@ -58,6 +58,7 @@ const optionsGuests = [
 const Booking = () => {
   const { t } = useTranslation();
   const { closeBook } = usePalace();
+  const [isClient, setIsClient] = useState(false);
   const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
   const [phone, setPhone] = useState("");
@@ -106,125 +107,137 @@ const Booking = () => {
   };
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
     emailjs.init("JdMTLLWNRu76H_EKb");
   }, []);
 
   return (
-    <>
-      {!messageSent ? (
-        <form className="w-full flex flex-col justify-center items-center uppercase gap-4 text-[12.08px] py-56 mt-5 px-11  lg:px-8 overflow-y-auto">
-          <h1 className="text-[14px] lg:text-[40px] lg:leading-[48px]  ">
-            {"Booking Request"}
-          </h1>
-          <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-3">
+    isClient && (
+      <>
+        {!messageSent ? (
+          <form className="w-full flex flex-col justify-center items-center uppercase gap-4 text-[12.08px] py-56 mt-5 px-11  lg:px-8 overflow-y-auto">
+            <h1 className="text-[14px] lg:text-[40px] lg:leading-[48px]  ">
+              {t("booking.title")}
+            </h1>
+            <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-3">
+              <div className="w-full flex flex-col justify-center items-start gap-1">
+                <label htmlFor="firstName">{t("booking.firstname")}</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  className="w-full rounded-md p-2 focus:outline-none"
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <div className="w-full flex flex-col justify-center items-start gap-1">
+                <label htmlFor="lastName">{t("booking.lastname")}</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  className="w-full rounded-md p-2 focus:outline-none"
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+            </div>
             <div className="w-full flex flex-col justify-center items-start gap-1">
-              <label htmlFor="firstName">{"First Name"}</label>
+              <label htmlFor="email">{t("booking.email")}</label>
               <input
-                type="text"
-                name="firstName"
-                id="firstName"
+                type="email"
+                name="email"
+                id="email"
                 className="w-full rounded-md p-2 focus:outline-none"
                 onChange={(e) => handleChange(e)}
               />
             </div>
+            <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-3">
+              <div className="w-full flex flex-col justify-center items-start gap-1">
+                <label htmlFor="phone">{t("booking.phone")}</label>
+                <PhoneInput
+                  id="phone"
+                  country={"ma"}
+                  inputClass="w-full"
+                  //value={this.state.phone}
+                  onChange={(phone) => setPhone(phone)}
+                />
+              </div>
+              <div className="w-full flex flex-col justify-center items-start gap-1">
+                <label htmlFor="guests">{t("booking.guests")}</label>
+                <select
+                  name="guests"
+                  id="guests"
+                  className="w-full rounded-md p-2 focus:outline-none bg-white"
+                  onChange={(e) => handleChange(e)}
+                >
+                  {optionsGuests.map((guest, i) => (
+                    <option value={guest} key={i}>
+                      {guest}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
             <div className="w-full flex flex-col justify-center items-start gap-1">
-              <label htmlFor="lastName">{"Last Name"}</label>
+              <label htmlFor="reservationDate">
+                {t("booking.reservationdate")}
+              </label>
               <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                className="w-full rounded-md p-2 focus:outline-none"
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-          </div>
-          <div className="w-full flex flex-col justify-center items-start gap-1">
-            <label htmlFor="email">{"Email"}</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="w-full rounded-md p-2 focus:outline-none"
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-          <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-3">
-            <div className="w-full flex flex-col justify-center items-start gap-1">
-              <label htmlFor="phone">{"Phone"}</label>
-              <PhoneInput
-                id="phone"
-                country={"ma"}
-                inputClass="w-full"
-                //value={this.state.phone}
-                onChange={(phone) => setPhone(phone)}
+                type="date"
+                name="reservationDate"
+                id="reservationDate"
+                className="w-full rounded-md p-2 focus:outline-none bg-white"
+                onChange={setReservationDate}
               />
             </div>
             <div className="w-full flex flex-col justify-center items-start gap-1">
-              <label htmlFor="guests">{"Guests"}</label>
+              <label htmlFor="time">{t("booking.time")}</label>
               <select
-                name="guests"
-                id="guests"
+                name="time"
+                id="time"
                 className="w-full rounded-md p-2 focus:outline-none bg-white"
                 onChange={(e) => handleChange(e)}
               >
-                {optionsGuests.map((guest, i) => (
-                  <option value={guest} key={i}>
-                    {guest}
+                {optionsTime.map((time) => (
+                  <option value={time} key={time}>
+                    {time}
                   </option>
                 ))}
               </select>
             </div>
-          </div>
 
-          <div className="w-full flex flex-col justify-center items-start gap-1">
-            <label htmlFor="reservationDate">{"Reservation Date"}</label>
-            <input
-              type="date"
-              name="reservationDate"
-              id="reservationDate"
-              className="w-full rounded-md p-2 focus:outline-none bg-white"
-              onChange={setReservationDate}
-            />
-          </div>
-          <div className="w-full flex flex-col justify-center items-start gap-1">
-            <label htmlFor="time">{"Time"}</label>
-            <select
-              name="time"
-              id="time"
-              className="w-full rounded-md p-2 focus:outline-none bg-white"
-              onChange={(e) => handleChange(e)}
+            <button
+              onClick={(e) => clickBook(e)}
+              className="py-3 px-6 mt-4 w-full bg-black text-white mr-auto cursor-pointer uppercase"
             >
-              {optionsTime.map((time) => (
-                <option value={time} key={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
+              {loading ? (
+                <ClockLoader size={20} color="#ffffff" />
+              ) : (
+                `${t("booking.request")}`
+              )}
+            </button>
+          </form>
+        ) : (
+          <div className="w-full h-full flex flex-col justify-center items-center gap-5 p-3.5  bg-background mt-3">
+            <span className="pr-2">
+              <strong className="mr-1">Success!</strong>
+              {t("booking.message")}
+            </span>
+            <Link
+              href="/"
+              onClick={() => closeBook()}
+              className="ml-auto w-full text-center bg-black text-[#DDF5F0] rounded hover:opacity-80 px-3 py-1"
+            >
+              {t("navbar.home")}
+            </Link>
           </div>
-
-          <button
-            onClick={(e) => clickBook(e)}
-            className="py-3 px-6 mt-4 w-full bg-black text-white mr-auto cursor-pointer uppercase"
-          >
-            {loading ? <ClockLoader size={20} color="#ffffff" /> : "Request"}
-          </button>
-        </form>
-      ) : (
-        <div className="w-full h-full flex flex-col justify-center items-center gap-5 p-3.5  bg-background mt-3">
-          <span className="pr-2">
-            <strong className="mr-1">Success!</strong>Thank you for your
-            request, we will get back to you as soon as possible
-          </span>
-          <Link
-            href="/"
-            onClick={() => closeBook()}
-            className="ml-auto w-full text-center bg-black text-[#DDF5F0] rounded hover:opacity-80 px-3 py-1"
-          >
-            Home
-          </Link>
-        </div>
-      )}
-    </>
+        )}
+      </>
+    )
   );
 };
 
