@@ -33,12 +33,6 @@ const galleryItems = [
     src: "/images/palace-10.jpg",
   },
   {
-    src: "/images/palace-20.jpg",
-  },
-  {
-    src: "/images/palace-19.jpg",
-  },
-  {
     src: "/images/palace-9.jpg",
   },
   {
@@ -49,9 +43,6 @@ const galleryItems = [
   },
   {
     src: "/images/palace-13.jpg",
-  },
-  {
-    src: "/images/palace-21.jpg",
   },
   {
     src: "/images/palace-14.jpg",
