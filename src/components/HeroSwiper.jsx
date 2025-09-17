@@ -17,28 +17,45 @@ const palaceText = [
   {
     text: "Menu",
     link: "/menu",
+    link_span: "#",
     linkText: "Discover",
+    logo: "",
     video:
       "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
   },
   {
     text: "Contact",
     link: "/contact-us",
+    link_span: "#",
     linkText: "Contact",
+    logo: "",
     video:
       "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
   },
   {
     text: "Gallery",
     link: "/gallery",
+    link_span: "#",
     linkText: "Discover",
+    logo: "",
     video:
       "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
   },
   {
     text: "Music & Dance",
     link: "#",
+    link_span: "#",
     linkText: "Discover",
+    logo: "",
+    video:
+      "https://res.cloudinary.com/dz7wroord/video/upload/v1758025269/palace/palace-music_a4s2ar.mp4",
+  },
+  {
+    text: "Restaurant",
+    link: "/restaurant",
+    link_span: "/restaurant",
+    linkText: "Discover",
+    logo: "",
     video:
       "https://res.cloudinary.com/dz7wroord/video/upload/v1758025269/palace/palace-music_a4s2ar.mp4",
   },
@@ -58,10 +75,9 @@ const HeroSwiper = () => {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 6500,
+            delay: 8000,
             disableOnInteraction: false,
           }}
-          loop={true}
           speed={2000}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper1"
@@ -71,7 +87,7 @@ const HeroSwiper = () => {
             <SwiperSlide key={i} className="">
               <div className="text-white h-full text-[18.5px] tracking-widest uppercase w-full flex flex-col justify-between items-center">
                 <span>{""}</span>
-                <span>{palace.text}</span>
+                <Link href={palace.link_span}>{palace.text}</Link>
                 {/*<Link
                 href={palace.link}
                 className="text-[12px] bg-white text-black px-12 py-[6px] tracking-widest"
