@@ -18,6 +18,17 @@ export const PalaceProvider = ({ children }) => {
     setOpenAbout((prev) => !prev);
   };
 
+  const closeAll = () => {
+    setOpenBook(false);
+    setOpenSideBar(false);
+  };
+  const closeBook = () => {
+    setOpenBook(false);
+  };
+  const closeSideBar = () => {
+    setOpenSideBar(false);
+  };
+
   const toggleBook = () => {
     setOpenBook((prev) => !prev);
   };
@@ -58,6 +69,9 @@ export const PalaceProvider = ({ children }) => {
         changeMobile,
         video,
         changeVideo,
+        closeAll,
+        closeBook,
+        closeSideBar,
         isMobile,
       }}
     >

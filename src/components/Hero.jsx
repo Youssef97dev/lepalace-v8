@@ -196,7 +196,7 @@ const Hero = () => {
         leaveFrom="transform translate-x-0 opacity-100"
         leaveTo="transform translate-x-full opacity-0"
       >
-        <div className="fixed  z-50 w-full lg:w-[25%] h-full bg-background flex justify-start">
+        <div className="fixed  z-50 w-full lg:w-[50%] h-full bg-background flex justify-start">
           <Booking />
         </div>
       </Transition>
