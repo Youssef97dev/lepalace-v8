@@ -120,7 +120,7 @@ const HeroSwiper = () => {
         </div>
         <Link
           href={palaceText[activeIndex].link}
-          className="text-[13px] bg-white text-black px-12 py-[6px] tracking-widest uppercase"
+          className="text-[13px] bg-background text-black px-12 py-[6px] tracking-widest uppercase"
         >
           {palaceText[activeIndex].linkText}
         </Link>
