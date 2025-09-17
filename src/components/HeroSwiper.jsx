@@ -71,7 +71,7 @@ const HeroSwiper = () => {
   };
   return (
     <div className="absolute w-full h-full  flex flex-col justify-center items-center py-20  z-50">
-      <div className="w-full h-full  flex justify-center items-center">
+      <div className="w-full h-full  flex justify-center items-center ">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -86,16 +86,16 @@ const HeroSwiper = () => {
         >
           {palaceText.map((palace, i) => (
             <SwiperSlide key={i} className="">
-              <div className="text-white h-full text-[18.5px] tracking-widest uppercase w-full flex flex-col justify-between items-center">
-                {palace.text === "Restaurant" && (
-                  <Image
-                    src="/logo/horse.png"
-                    alt="logo"
-                    width={500}
-                    height={500}
-                    className="object-cover w-10"
-                  />
-                )}
+              <div className="text-white h-full text-[16.5px] tracking-widest  uppercase w-full flex flex-col justify-center items-center">
+                <Image
+                  src="/logo/horse.png"
+                  alt="logo"
+                  width={500}
+                  height={500}
+                  className={`object-cover w-10 ${
+                    palace.text === "Restaurant" ? "opacity-100" : "opacity-0"
+                  }`}
+                />
                 <Link href={palace.link_span}>{palace.text}</Link>
                 {/*<Link
                 href={palace.link}
