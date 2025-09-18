@@ -24,7 +24,7 @@ const HeroSwiper = () => {
   const palaceText = [
     {
       text: "Contact",
-      link: "/contact-us",
+      link: "/contact-us.html",
       link_span: "#",
       linkText: "Contact",
       logo: "",
@@ -33,7 +33,7 @@ const HeroSwiper = () => {
     },
     {
       text: t("navbar.gallery"),
-      link: "/gallery",
+      link: "/gallery.html",
       link_span: "#",
       linkText: t("hero.discover"),
       logo: "",
@@ -42,8 +42,8 @@ const HeroSwiper = () => {
     },
     {
       text: t("hero.music"),
-      link: "/music",
-      link_span: "/music",
+      link: "/music.html",
+      link_span: "/music.html",
       linkText: t("hero.discover"),
       logo: "",
       video:
@@ -51,8 +51,8 @@ const HeroSwiper = () => {
     },
     {
       text: "Restaurant",
-      link: "/restaurant",
-      link_span: "/restaurant",
+      link: "/restaurant.html",
+      link_span: "/restaurant.html",
       linkText: t("hero.discover"),
       logo: "",
       video:

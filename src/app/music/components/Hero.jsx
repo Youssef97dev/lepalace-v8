@@ -32,7 +32,7 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
               <source
-                src="https://res.cloudinary.com/dz7wroord/video/upload/v1758123552/palace/palacemusic_tgsmxp.mp4"
+                src="https://res.cloudinary.com/dz7wroord/video/upload/v1758190778/palace/danceandmusic_vcpce0.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.

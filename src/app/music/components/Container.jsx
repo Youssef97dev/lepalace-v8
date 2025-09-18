@@ -50,7 +50,7 @@ const Container = () => {
                 <Link href="/">{t("navbar.home")}</Link>
               </li>
               <li className="pb-3 border-b border-[#93918f]">
-                <Link href="/menu">{"Menu"}</Link>
+                <Link href="/menu.html">{"Menu"}</Link>
               </li>
 
               <li
@@ -60,10 +60,10 @@ const Container = () => {
                 <span>{t("navbar.reservation")}</span>
               </li>
               <li className="pb-3 border-b border-[#93918f]">
-                <Link href="/gallery">{t("navbar.gallery")}</Link>
+                <Link href="/gallery.html">{t("navbar.gallery")}</Link>
               </li>
               <li className="pb-3 border-b border-[#93918f]">
-                <Link href="/contact-us">{"Contact"}</Link>
+                <Link href="/contact-us.html">{"Contact"}</Link>
               </li>
               <li className="w-full flex justify-center items-center gap-2 pb-3 border-b border-[#93918f]">
                 <span onClick={() => changeLanguage("en")}>{"EN"}</span>
@@ -74,8 +74,11 @@ const Container = () => {
                 <span>{"Le Palace Marrakech Restaurant & Fine dining."}</span>
                 <span>{"Av. Echouhada Rue Ahmed Chawqui Hivernage1"}</span>
                 <span>{"Opening hours: 07.00 PM – 02.00 AM"}</span>
-                <Link href="#" className="lowercase">
-                  {"reservation@le-palacemarrakech.com"}
+                <Link
+                  href="mailto:reservations@le-palacemarrakech.com"
+                  className="lowercase"
+                >
+                  {"reservations@le-palacemarrakech.com"}
                 </Link>
                 <Link
                   href="https://www.instagram.com/lepalacemarrakech/"

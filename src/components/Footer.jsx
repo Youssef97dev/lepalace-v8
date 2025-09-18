@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       <div className="font-basker text-[18px]">{``}</div>
       <Link
-        href="/menu"
+        href="/menu.html"
         className="text-[14px] text-[#000000] border-l border-black px-3 py-[2px]"
       >
         {"MENU"}

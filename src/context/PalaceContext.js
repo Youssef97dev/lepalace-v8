@@ -10,7 +10,7 @@ export const PalaceProvider = ({ children }) => {
   const [openBook, setOpenBook] = useState(false);
   const [openContact, setOpenContact] = useState(false);
   const [video, setVideo] = useState(
-    "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4"
+    "https://res.cloudinary.com/dz7wroord/video/upload/v1758190758/palace/hero-mobile-palace_ngkn6s.mp4"
   );
   const [isMobile, setIsMobile] = useState(false);
 
