@@ -128,7 +128,7 @@ const Hero = () => {
                 alt={`Image ${index + 1}`}
                 layout="fill"
                 objectFit="cover"
-                className="object-cover w-full h-full "
+                className="object-cover scale-100 w-full h-full "
               />
             </div>
           ))}
