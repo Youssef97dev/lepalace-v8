@@ -21,7 +21,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="w-full flex justify-between items-center py-[5px] z-[60] bg-background border-t border-[#93918f]">
+    <div className="w-full flex justify-between items-center py-[5px] lg:py-[8px] z-[60] bg-background border-t border-[#93918f]">
       {/* Spotify iframe */}
       <audio ref={audioRef} src="/music/music.mp3" preload="auto" loop />
       <div

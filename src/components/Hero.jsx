@@ -115,7 +115,7 @@ const Hero = () => {
             )}
           </AnimatePresence>
         </div>
-        <div className="relative w-full h-full lg:flex flex-col justify-center items-center hidden">
+        <div className="relative w-full h-full  lg:flex flex-col justify-center items-center hidden">
           {imagesLarge.map((src, index) => (
             <div
               key={index}
@@ -128,12 +128,14 @@ const Hero = () => {
                 alt={`Image ${index + 1}`}
                 layout="fill"
                 objectFit="cover"
-                className="object-cover scale-100 w-full h-full "
+                className=" w-full h-full object-cover"
               />
             </div>
           ))}
           <HeroSwiper />
-          <div className="absolute top-1 w-full flex justify-center items-center text-white  uppercase text-[9px]">{`Welcome to le palace`}</div>
+          <div className="absolute top-1 w-full flex justify-center items-center text-white  uppercase text-[14px]">
+            {t("hero.text_top")}
+          </div>
           <div
             className={`absolute top-6 w-full flex flex-col justify-center items-end pr-4 z-50  gap-2  text-black`}
           >
@@ -247,7 +249,7 @@ const Hero = () => {
           leaveFrom="transform translate-x-0 opacity-100"
           leaveTo="transform translate-x-full opacity-0"
         >
-          <div className="fixed  z-50 w-full lg:w-[50%] h-full bg-background flex justify-start">
+          <div className="fixed right-0  z-50 w-full lg:w-[40%] h-full bg-background flex justify-start">
             <Booking />
           </div>
         </Transition>

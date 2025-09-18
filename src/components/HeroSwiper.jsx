@@ -87,7 +87,7 @@ const HeroSwiper = () => {
           >
             {palaceText.map((palace, i) => (
               <SwiperSlide key={i} className="">
-                <div className="text-white h-full text-[16.5px] tracking-widest  uppercase w-full flex flex-col justify-center items-center">
+                <div className="text-white h-full text-[16.5px] lg:text-[24.5px] tracking-widest  uppercase w-full flex flex-col justify-center items-center">
                   <Image
                     src="/logo/horse.png"
                     alt="logo"
@@ -111,7 +111,7 @@ const HeroSwiper = () => {
         </div>
         <Link
           href={palaceText[activeIndex].link}
-          className="text-[13px] bg-background text-black px-12 py-[6px] tracking-widest uppercase"
+          className="text-[13px] lg:text-[15px] bg-background text-black px-12 py-[6px] tracking-widest uppercase"
         >
           {palaceText[activeIndex].linkText}
         </Link>

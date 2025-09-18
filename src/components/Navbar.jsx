@@ -12,22 +12,29 @@ const Navbar = () => {
     usePalace();
 
   useEffect(() => {
-    setIsClient(true);
+    const timer = setTimeout(() => {
+      setIsClient(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     isClient && (
-      <div className="w-full flex justify-between items-center border-b border-[#93918f] py-[5px] z-[60] bg-background">
+      <div className="w-full flex justify-between items-center border-b border-[#93918f] py-[5px] lg:py-[8px] z-[60] bg-background">
         <div
           onClick={() => {
             toggleSideBar();
             closeBook();
           }}
-          className="text-[12px] text-[#000000] border-r border-black w-20 flex justify-center items-center py-[2px]"
+          className="text-[12px] lg:text-[14px] text-[#000000] border-r border-black w-20 flex justify-center items-center py-[2px]"
         >
           <RiMenuFold2Line size={19} />
         </div>
-        <div className="font-basker text-[18px]" onClick={() => closeAll()}>
+        <div
+          className="font-basker text-[18px] lg:text-[19px]"
+          onClick={() => closeAll()}
+        >
           <Link href="/">{`LE PALACE`}</Link>
         </div>
         <div
@@ -35,7 +42,7 @@ const Navbar = () => {
             toggleBook();
             closeSideBar();
           }}
-          className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px] cursor-pointer uppercase w-20 text-center"
+          className="text-[12px] lg:text-[14px] text-[#000000] border-l border-black px-3 py-[2px] cursor-pointer uppercase w-20 text-center"
         >
           {t("navbar.book")}
         </div>
