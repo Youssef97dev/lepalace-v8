@@ -23,7 +23,7 @@ const Navbar = () => {
             toggleSideBar();
             closeBook();
           }}
-          className="text-[12px] text-[#000000] border-r border-black w-16 flex justify-center items-center py-[2px]"
+          className="text-[12px] text-[#000000] border-r border-black w-20 flex justify-center items-center py-[2px]"
         >
           <RiMenuFold2Line size={19} />
         </div>
@@ -35,7 +35,7 @@ const Navbar = () => {
             toggleBook();
             closeSideBar();
           }}
-          className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px] cursor-pointer uppercase"
+          className="text-[12px] text-[#000000] border-l border-black px-3 py-[2px] cursor-pointer uppercase w-20 text-center"
         >
           {t("navbar.book")}
         </div>

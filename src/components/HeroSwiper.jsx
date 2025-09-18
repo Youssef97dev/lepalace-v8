@@ -29,7 +29,7 @@ const HeroSwiper = () => {
       linkText: "Contact",
       logo: "",
       video:
-        "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
+        "https://res.cloudinary.com/dz7wroord/video/upload/v1758190758/palace/hero-mobile-palace_ngkn6s.mp4",
     },
     {
       text: t("navbar.gallery"),
@@ -38,7 +38,7 @@ const HeroSwiper = () => {
       linkText: t("hero.discover"),
       logo: "",
       video:
-        "https://res.cloudinary.com/dz7wroord/video/upload/v1757931795/palace/hero-mobile-2_tbw0qi.mp4",
+        "https://res.cloudinary.com/dz7wroord/video/upload/v1758190758/palace/hero-mobile-palace_ngkn6s.mp4",
     },
     {
       text: t("hero.music"),
@@ -47,7 +47,7 @@ const HeroSwiper = () => {
       linkText: t("hero.discover"),
       logo: "",
       video:
-        "https://res.cloudinary.com/dz7wroord/video/upload/v1758025269/palace/palace-music_a4s2ar.mp4",
+        "https://res.cloudinary.com/dz7wroord/video/upload/v1758190778/palace/danceandmusic_vcpce0.mp4",
     },
     {
       text: "Restaurant",
