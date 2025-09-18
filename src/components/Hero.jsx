@@ -10,10 +10,20 @@ import { usePalace } from "@/context/PalaceContext";
 import Contact from "./Contact";
 import i18next from "../../i18n";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
+
+const imagesLarge = [
+  "/images/palace-large-1.jpg",
+  "/images/palace-large-2.jpg",
+  "/images/palace-large-3.jpg",
+  "/images/palace-large-4.jpg",
+  "/images/palace-large-5.jpg",
+];
 
 const Hero = () => {
   const { t } = useTranslation();
   const [isClient, setIsClient] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const {
     openAbout,
     toggleAbout,
@@ -32,6 +42,13 @@ const Hero = () => {
     localStorage.setItem("lang", lang);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesLarge.length);
+    }, 5000); // Change image every 3000ms
+
+    return () => clearInterval(interval);
+  }, []);
   useEffect(() => {
     i18next.changeLanguage(i18next.language);
   }, []);
@@ -99,10 +116,22 @@ const Hero = () => {
           </AnimatePresence>
         </div>
         <div className="relative w-full h-full lg:flex flex-col justify-center items-center hidden">
-          <video className="object-cover h-full w-full" autoPlay loop muted>
-            <source src="/videos/hero-desktop.mp4" type="video/mp4" />
-            Your browser does not support the video tags.
-          </video>
+          {imagesLarge.map((src, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={src}
+                alt={`Image ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className="object-cover w-full h-full "
+              />
+            </div>
+          ))}
           <HeroSwiper />
           <div className="absolute top-1 w-full flex justify-center items-center text-white  uppercase text-[9px]">{`Welcome to le palace`}</div>
           <div
